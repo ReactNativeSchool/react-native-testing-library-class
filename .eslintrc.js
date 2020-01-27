@@ -1,3 +1,4 @@
 module.exports = {
-  extends: "handlebarlabs"
+  extends: "handlebarlabs",
+  rules: { "react/state-in-constructor": 0 }
 };
