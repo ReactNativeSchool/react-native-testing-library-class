@@ -36,7 +36,7 @@ export default ({ navigation }) => (
     <TextField label="Password" secureTextEntry />
     <TextField label="Confirm Password" secureTextEntry />
     <ErrorText text="" />
-    <Button text="Submit" onPress={() => alert("todo!")} />
+    <Button text="Submit" onPress={() => alert("todo!")} disabled />
     <View style={styles.textBlock}>
       <Text style={styles.text}>Already have an account?</Text>
       <TouchableOpacity onPress={() => navigation.navigate("SignIn")}>

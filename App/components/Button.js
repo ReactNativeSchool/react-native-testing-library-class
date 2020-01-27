@@ -19,11 +19,11 @@ const styles = StyleSheet.create({
   }
 });
 
-export const Button = ({ text, onPress, loading = false, style = {} }) => (
+export const Button = ({ text, onPress, disabled = false, style = {} }) => (
   <TouchableOpacity
     onPress={onPress}
-    style={[styles.button, loading && styles.buttonLoading, style]}
-    disabled={loading}
+    style={[styles.button, disabled && styles.buttonLoading, style]}
+    disabled={disabled}
   >
     <Text style={styles.text}>{text}</Text>
   </TouchableOpacity>
