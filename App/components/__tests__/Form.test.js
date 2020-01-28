@@ -28,4 +28,5 @@ test("forwards remaining props to underlying TextInput", () => {
 
   fireEvent.changeText(getByTestId("Form.TextInput"), "testing!");
   expect(onChangeTextMock).toHaveBeenCalledWith("testing!");
+  expect(onChangeTextMock).not.toHaveBeenCalledWith("potato");
 });
