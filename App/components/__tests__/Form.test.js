@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-native-testing-library";
+import { render, fireEvent } from "react-native-testing-library";
 
 import { TextField } from "../Form";
 
@@ -11,8 +11,13 @@ test("renders a label", () => {
 });
 
 test("forwards remaining props to underlying TextInput", () => {
+  const onChangeTextMock = jest.fn();
   const { getByTestId } = render(
-    <TextField label="Test Label" passedProp="yes" />
+    <TextField
+      label="Test Label"
+      passedProp="yes"
+      onChangeText={onChangeTextMock}
+    />
   );
 
   expect(getByTestId("Form.TextInput").props).toEqual(
@@ -20,4 +25,7 @@ test("forwards remaining props to underlying TextInput", () => {
       passedProp: "yes"
     })
   );
+
+  fireEvent.changeText(getByTestId("Form.TextInput"), "testing!");
+  expect(onChangeTextMock).toHaveBeenCalledWith("testing!");
 });
