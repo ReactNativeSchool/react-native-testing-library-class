@@ -3,6 +3,10 @@ import { render, fireEvent } from "react-native-testing-library";
 
 import CreateAccount from "../CreateAccount";
 
+beforeEach(() => {
+  fetch.resetMocks();
+});
+
 test("it renders all inputs", () => {
   const { toJSON } = render(<CreateAccount />);
 
@@ -27,7 +31,9 @@ test("displays error if all fields are not completed", () => {
   expect(getByTestId("error-message").props.text).not.toBeNull();
 });
 
-test("doesn't display error message if all fields have an input", () => {
+test("doesn't display error message if all fields have an input", async () => {
+  fetch.mockResponseOnce(JSON.stringify({}));
+
   const { getByTestId } = render(<CreateAccount />);
 
   fireEvent(
@@ -47,4 +53,5 @@ test("doesn't display error message if all fields have an input", () => {
   fireEvent.press(getByTestId("submit-button"));
 
   expect(getByTestId("error-message").props.text).toBeNull();
+  await expect(fetch.mock.calls.length).toEqual(1);
 });

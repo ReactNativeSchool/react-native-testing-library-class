@@ -1,4 +1,4 @@
-import React, { isValidElement } from "react";
+import React from "react";
 import {
   ScrollView,
   Text,
@@ -46,6 +46,27 @@ export default class CreateAccount extends React.Component {
       this.setState({ errorMessage: "An error occured." });
     } else {
       this.setState({ errorMessage: null });
+      const { email, fName, lName, password } = this.state;
+
+      fetch("https://postman-echo.com/post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email,
+          fName,
+          lName,
+          password
+        })
+      })
+        .then(res => res.json())
+        .then(res => {
+          console.log("res", res);
+        })
+        .catch(err => {
+          console.log("err", err);
+        });
     }
   };
 
