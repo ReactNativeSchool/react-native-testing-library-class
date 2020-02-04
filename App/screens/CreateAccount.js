@@ -79,37 +79,32 @@ export default class CreateAccount extends React.Component {
         style={{ backgroundColor: "#fff" }}
       >
         <TextField
-          testID="CreateAccount.email"
           label="Email"
           placeholder="john.doe@example.com"
           onChangeText={email => this.setState({ email })}
         />
         <TextField
-          testID="CreateAccount.fName"
           label="First Name"
           placeholder="John"
           onChangeText={fName => this.setState({ fName })}
         />
         <TextField
-          testID="CreateAccount.lName"
           label="Last Name"
           placeholder="Doe"
           onChangeText={lName => this.setState({ lName })}
         />
         <TextField
-          testID="CreateAccount.password"
           label="Password"
           secureTextEntry
           onChangeText={password => this.setState({ password })}
         />
         <TextField
-          testID="CreateAccount.cPassword"
           label="Confirm Password"
           secureTextEntry
           onChangeText={cPassword => this.setState({ cPassword })}
         />
-        <ErrorText testID="error-message" text={this.state.errorMessage} />
-        <Button testID="submit-button" text="Submit" onPress={this.onSubmit} />
+        <ErrorText text={this.state.errorMessage} />
+        <Button text="Submit" onPress={this.onSubmit} />
         <View style={styles.textBlock}>
           <Text style={styles.text}>Already have an account?</Text>
           <TouchableOpacity onPress={() => navigation.navigate("SignIn")}>

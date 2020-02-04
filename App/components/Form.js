@@ -35,7 +35,6 @@ export const TextField = ({ label, ...props }) => (
     <TextInput
       style={styles.textfield}
       placeholderTextColor="#828282"
-      testID="Form.TextInput"
       {...props}
     />
   </View>
