@@ -5,8 +5,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject",
-    "test": "jest"
+    "eject": "expo eject"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.6",
@@ -27,21 +26,7 @@
     "babel-preset-expo": "~8.0.0",
     "eslint": "^6.8.0",
     "eslint-config-handlebarlabs": "^0.0.4",
-    "jest-expo": "^36.0.1",
-    "jest-fetch-mock": "^3.0.1",
-    "prettier": "^1.19.1",
-    "react-native-testing-library": "^1.12.0",
-    "react-test-renderer": "^16.12.0"
+    "prettier": "^1.19.1"
   },
-  "private": true,
-  "jest": {
-    "preset": "jest-expo",
-    "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
-    ],
-    "automock": false,
-    "setupFiles": [
-      "./test-config/setupJest.js"
-    ]
-  }
+  "private": true
 }
