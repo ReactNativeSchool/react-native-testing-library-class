@@ -9,3 +9,16 @@ test("renders the passed label", () => {
   expect(getByText("Test Label")).not.toBeNull();
   expect(queryByText("ASDF")).toBeNull();
 });
+
+test("forwards remaining props to the underlying TextInput", () => {
+  const { getByTestId } = render(
+    <TextField label="Test Label" passedProp="yes" />
+  );
+
+  console.log(getByTestId("Form.TextInput").props);
+  expect(getByTestId("Form.TextInput").props).toEqual(
+    expect.objectContaining({
+      passedProp: "yes"
+    })
+  );
+});
