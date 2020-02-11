@@ -79,6 +79,7 @@ export default class CreateAccount extends React.Component {
         style={{ backgroundColor: "#fff" }}
       >
         <TextField
+          testID="CreateAccount.email"
           label="Email"
           placeholder="john.doe@example.com"
           onChangeText={email => this.setState({ email })}
@@ -103,7 +104,10 @@ export default class CreateAccount extends React.Component {
           secureTextEntry
           onChangeText={cPassword => this.setState({ cPassword })}
         />
-        <ErrorText text={this.state.errorMessage} />
+        <ErrorText
+          testID="CreateAccount.errorMessage"
+          text={this.state.errorMessage}
+        />
         <Button text="Submit" onPress={this.onSubmit} />
         <View style={styles.textBlock}>
           <Text style={styles.text}>Already have an account?</Text>
