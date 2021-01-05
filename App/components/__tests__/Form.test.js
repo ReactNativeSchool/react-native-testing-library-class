@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "react-native-testing-library";
+import { render, fireEvent } from "@testing-library/react-native";
 
 import { TextField } from "../Form";
 
@@ -23,7 +23,7 @@ test("forwards remaining props to the underlying TextInput", () => {
 
   expect(getByTestId("Form.TextInput").props).toEqual(
     expect.objectContaining({
-      passedProp: "yes"
+      passedProp: "yes",
     })
   );
 

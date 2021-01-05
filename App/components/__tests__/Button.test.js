@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "react-native-testing-library";
+import { render, fireEvent } from "@testing-library/react-native";
 
 import { mockComponent } from "../../../testing-config/mockComponent";
 
@@ -10,9 +10,9 @@ jest.mock(
   () => {
     return mockComponent(
       "react-native/Libraries/Components/Touchable/TouchableOpacity",
-      props => {
+      (props) => {
         return {
-          onPress: props.disabled ? () => {} : props.onPress
+          onPress: props.disabled ? () => {} : props.onPress,
         };
       }
     );

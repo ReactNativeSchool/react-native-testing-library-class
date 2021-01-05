@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "react-native-testing-library";
+import { render, fireEvent } from "@testing-library/react-native";
 
 import CreateAccount from "../CreateAccount";
 
@@ -16,13 +16,17 @@ test("it renders all inputs as expected", () => {
 test("displays error message if all fields are not completed", () => {
   const { getByTestId, getByText } = render(<CreateAccount />);
 
-  expect(getByTestId("CreateAccount.errorMessage").props.text).toBeNull();
+  expect(getByTestId("CreateAccount.errorMessage").props.children).toBeNull();
 
   fireEvent.press(getByText("Submit"));
-  expect(getByTestId("CreateAccount.errorMessage").props.text).not.toBeNull();
+  expect(
+    getByTestId("CreateAccount.errorMessage").props.children
+  ).not.toBeNull();
 
   fireEvent.changeText(getByTestId("CreateAccount.email"), "test@example.com");
-  expect(getByTestId("CreateAccount.errorMessage").props.text).not.toBeNull();
+  expect(
+    getByTestId("CreateAccount.errorMessage").props.children
+  ).not.toBeNull();
 });
 
 test("doesn't display error message if all fields are complete", async () => {
@@ -30,9 +34,11 @@ test("doesn't display error message if all fields are complete", async () => {
 
   const { getByTestId, getByText } = render(<CreateAccount />);
 
-  expect(getByTestId("CreateAccount.errorMessage").props.text).toBeNull();
+  expect(getByTestId("CreateAccount.errorMessage").props.children).toBeNull();
   fireEvent.press(getByText("Submit"));
-  expect(getByTestId("CreateAccount.errorMessage").props.text).not.toBeNull();
+  expect(
+    getByTestId("CreateAccount.errorMessage").props.children
+  ).not.toBeNull();
 
   fireEvent(
     getByTestId("CreateAccount.email"),
@@ -45,6 +51,6 @@ test("doesn't display error message if all fields are complete", async () => {
   fireEvent(getByTestId("CreateAccount.cPassword"), "onChangeText", "password");
 
   fireEvent.press(getByText("Submit"));
-  expect(getByTestId("CreateAccount.errorMessage").props.text).toBeNull();
+  expect(getByTestId("CreateAccount.errorMessage").props.children).toBeNull();
   await expect(fetch.mock.calls.length).toEqual(1);
 });
