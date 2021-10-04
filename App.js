@@ -1,16 +1,16 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
-import CreateAccount from "./screens/CreateAccount";
-import SignIn from "./screens/SignIn";
+import CreateAccount from "./App/screens/CreateAccount";
+import SignIn from "./App/screens/SignIn";
 
 const AppNavigator = createStackNavigator({
   CreateAccount: {
-    screen: CreateAccount
+    screen: CreateAccount,
   },
   SignIn: {
-    screen: SignIn
-  }
+    screen: SignIn,
+  },
 });
 
 export default createAppContainer(AppNavigator);
