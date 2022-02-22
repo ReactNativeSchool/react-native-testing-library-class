@@ -6,33 +6,34 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     borderBottomWidth: 1,
     borderBottomColor: "#E4E4E4",
-    marginBottom: 11
+    marginBottom: 11,
   },
   label: {
     color: "#4A4A4A",
     fontSize: 18,
     fontWeight: "600",
-    marginBottom: 7
+    marginBottom: 7,
   },
   textfield: {
     fontSize: 18,
     fontWeight: "400",
     color: "#828282",
-    marginBottom: 4
+    marginBottom: 4,
   },
   errorText: {
     color: "red",
     fontSize: 16,
     marginTop: 5,
     marginBottom: 15,
-    marginHorizontal: 20
-  }
+    marginHorizontal: 20,
+  },
 });
 
 export const TextField = ({ label, ...props }) => (
   <View style={styles.row}>
     <Text style={styles.label}>{label}</Text>
     <TextInput
+      testID="Form.TextInput"
       style={styles.textfield}
       placeholderTextColor="#828282"
       {...props}
@@ -40,6 +41,8 @@ export const TextField = ({ label, ...props }) => (
   </View>
 );
 
-export const ErrorText = ({ text = "" }) => (
-  <Text style={styles.errorText}>{text}</Text>
+export const ErrorText = ({ text = "", ...props }) => (
+  <Text style={styles.errorText} {...props}>
+    {text}
+  </Text>
 );
