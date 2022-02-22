@@ -7,11 +7,11 @@ You'll need to have the [React Native CLI](https://facebook.github.io/react-nati
 ## Installation
 
 - `git clone https://github.com/ReactNativeSchool/react-native-testing-library-class.git`
-- `yarn install` / `npm install`
+- `yarn install`
 
 ## Running
 
-- `yarn run ios`/`npm run ios` or `yarn run android`/`npm run android`
+- `yarn run ios` or `yarn run android`
 
 ---
 
