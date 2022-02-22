@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders all inputs as expected 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "paddingVertical": 20,
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "#fff",
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#E4E4E4",
+          "borderBottomWidth": 1,
+          "marginBottom": 11,
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#4A4A4A",
+            "fontSize": 18,
+            "fontWeight": "600",
+            "marginBottom": 7,
+          }
+        }
+      >
+        Email
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="john.doe@example.com"
+        placeholderTextColor="#828282"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "color": "#828282",
+            "fontSize": 18,
+            "fontWeight": "400",
+            "marginBottom": 4,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#E4E4E4",
+          "borderBottomWidth": 1,
+          "marginBottom": 11,
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#4A4A4A",
+            "fontSize": 18,
+            "fontWeight": "600",
+            "marginBottom": 7,
+          }
+        }
+      >
+        First Name
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="John"
+        placeholderTextColor="#828282"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "color": "#828282",
+            "fontSize": 18,
+            "fontWeight": "400",
+            "marginBottom": 4,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#E4E4E4",
+          "borderBottomWidth": 1,
+          "marginBottom": 11,
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#4A4A4A",
+            "fontSize": 18,
+            "fontWeight": "600",
+            "marginBottom": 7,
+          }
+        }
+      >
+        Last Name
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="Doe"
+        placeholderTextColor="#828282"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "color": "#828282",
+            "fontSize": 18,
+            "fontWeight": "400",
+            "marginBottom": 4,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#E4E4E4",
+          "borderBottomWidth": 1,
+          "marginBottom": 11,
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#4A4A4A",
+            "fontSize": 18,
+            "fontWeight": "600",
+            "marginBottom": 7,
+          }
+        }
+      >
+        Password
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholderTextColor="#828282"
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Object {
+            "color": "#828282",
+            "fontSize": 18,
+            "fontWeight": "400",
+            "marginBottom": 4,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#E4E4E4",
+          "borderBottomWidth": 1,
+          "marginBottom": 11,
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#4A4A4A",
+            "fontSize": 18,
+            "fontWeight": "600",
+            "marginBottom": 7,
+          }
+        }
+      >
+        Confirm Password
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholderTextColor="#828282"
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Object {
+            "color": "#828282",
+            "fontSize": 18,
+            "fontWeight": "400",
+            "marginBottom": 4,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontSize": 16,
+          "marginBottom": 15,
+          "marginHorizontal": 20,
+          "marginTop": 5,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#D22322",
+          "marginHorizontal": 20,
+          "opacity": 1,
+          "paddingHorizontal": 45,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 18,
+            "fontWeight": "500",
+          }
+        }
+      >
+        Submit
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "marginTop": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#969696",
+            "fontSize": 18,
+            "marginBottom": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        Already have an account?
+      </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#969696",
+                "fontSize": 18,
+                "marginBottom": 2,
+                "textAlign": "center",
+              },
+              Object {
+                "textDecorationLine": "underline",
+              },
+            ]
+          }
+        >
+          Sign in.
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
