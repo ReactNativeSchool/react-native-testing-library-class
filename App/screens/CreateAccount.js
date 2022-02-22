@@ -48,25 +48,25 @@ export default class CreateAccount extends React.Component {
       this.setState({ errorMessage: null });
       const { email, fName, lName, password } = this.state;
 
-      fetch("https://postman-echo.com/post", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          fName,
-          lName,
-          password,
-        }),
-      })
-        .then((res) => res.json())
-        .then((res) => {
-          console.log("res", res);
-        })
-        .catch((err) => {
-          console.log("err", err);
-        });
+      // fetch("https://postman-echo.com/post", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json"
+      //   },
+      //   body: JSON.stringify({
+      //     email,
+      //     fName,
+      //     lName,
+      //     password
+      //   })
+      // })
+      //   .then(res => res.json())
+      //   .then(res => {
+      //     console.log("res", res);
+      //   })
+      //   .catch(err => {
+      //     console.log("err", err);
+      //   });
     }
   };
 
@@ -85,21 +85,25 @@ export default class CreateAccount extends React.Component {
           onChangeText={(email) => this.setState({ email })}
         />
         <TextField
+          testID="CreateAccount.fName"
           label="First Name"
           placeholder="John"
           onChangeText={(fName) => this.setState({ fName })}
         />
         <TextField
+          testID="CreateAccount.lName"
           label="Last Name"
           placeholder="Doe"
           onChangeText={(lName) => this.setState({ lName })}
         />
         <TextField
+          testID="CreateAccount.password"
           label="Password"
           secureTextEntry
           onChangeText={(password) => this.setState({ password })}
         />
         <TextField
+          testID="CreateAccount.cPassword"
           label="Confirm Password"
           secureTextEntry
           onChangeText={(cPassword) => this.setState({ cPassword })}
