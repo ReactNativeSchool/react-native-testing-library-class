@@ -50,7 +50,7 @@ exports[`it renders all inputs as expected 1`] = `
             "marginBottom": 4,
           }
         }
-        testID="Form.TextInput"
+        testID="CreateAccount.email"
         underlineColorAndroid="transparent"
       />
     </View>
@@ -224,6 +224,7 @@ exports[`it renders all inputs as expected 1`] = `
           "marginTop": 5,
         }
       }
+      testID="CreateAccount.errorMessage"
     />
     <View
       accessible={true}
